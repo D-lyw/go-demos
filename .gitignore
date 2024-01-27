@@ -39,3 +39,5 @@ profile.cov
 logs/
 
 tests/spec-tests/
+
+.env
