@@ -10,7 +10,6 @@ import (
 )
 
 func ScanPathFile(path string) {
-
 	err := filepath.Walk(path, func(itemPath string, info fs.FileInfo, err error) error {
 		if err != nil {
 			fmt.Printf("prevent panic by handling failure accessing a path %q: %v\n", path, err)
@@ -53,11 +52,10 @@ func ScanPathFile(path string) {
 	}
 }
 
-func ScanWalkDir(path string, depth int) error {
-	// 输出文件或目录
-	//if depth > 0 {
-	//	fmt.Printf("%s|%s\n", strings.Repeat("--", depth), filepath.Base(path))
-	//}
+func ScanWalkDir(path string, depth int, maxDepth int) error {
+	if depth > maxDepth {
+		return nil
+	}
 
 	files, err := os.ReadDir(path)
 	if err != nil {
@@ -70,7 +68,7 @@ func ScanWalkDir(path string, depth int) error {
 			}
 			fmt.Printf("%s| %s\n", strings.Repeat("--", depth), file.Name())
 
-			err := ScanWalkDir(filepath.Join(path, file.Name()), depth+1)
+			err := ScanWalkDir(filepath.Join(path, file.Name()), depth+1, maxDepth)
 			if err != nil {
 				return err
 			}

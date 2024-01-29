@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c087a344-e00c-4c44-9e0a-4157ff6b829d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tree/tree.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tree/tree_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagequeue/mq.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagequeue/mq_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagequeue/rabbitmq.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagequeue/rabbitmq_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/tree/tree.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/tree/tree.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/tree.go" beforeDir="false" afterPath="$PROJECT_DIR$/tree/tree.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/tree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tree/tree_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,16 +76,7 @@
       <recent name="$PROJECT_DIR$/cmd/tree" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go-demos/cmd-tree">
-    <configuration name="go build go-demos" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-demos" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go-demos" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.TestRunMQ in go-demos/messagequeue">
     <configuration name="go build go-demos/cmd-tree" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="go-demos" />
       <working_directory value="$PROJECT_DIR$" />
@@ -100,23 +96,28 @@
       <filePath value="$PROJECT_DIR$/cmd/tree.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-demos/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunMQ in go-demos/messagequeue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-demos" />
-      <working_directory value="$PROJECT_DIR$" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </EXTENSION>
-      <kind value="FILE" />
-      <package value="go-demos/cmd" />
+      <working_directory value="$PROJECT_DIR$/messagequeue" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go-demos/messagequeue" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/cmd/listen.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRunMQ\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRunMessageQueue in go-demos/messagequeue" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-demos" />
+      <working_directory value="$PROJECT_DIR$/messagequeue" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go-demos/messagequeue" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRunMessageQueue\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestScanPathFile in go-demos/tree" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -144,19 +145,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build go-demos" />
-      <item itemvalue="Go Build.go build go-demos/cmd" />
       <item itemvalue="Go Build.go build go-demos/cmd-tree" />
+      <item itemvalue="Go Test.TestRunMQ in go-demos/messagequeue" />
+      <item itemvalue="Go Test.TestRunMessageQueue in go-demos/messagequeue" />
       <item itemvalue="Go Test.TestScanPathFile in go-demos/tree" />
       <item itemvalue="Go Test.TestScanWalkDir in go-demos/tree" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go-demos/cmd-tree" />
+        <item itemvalue="Go Test.TestRunMQ in go-demos/messagequeue" />
+        <item itemvalue="Go Test.TestRunMessageQueue in go-demos/messagequeue" />
         <item itemvalue="Go Test.TestScanWalkDir in go-demos/tree" />
+        <item itemvalue="Go Build.go build go-demos/cmd-tree" />
         <item itemvalue="Go Test.TestScanPathFile in go-demos/tree" />
-        <item itemvalue="Go Build.go build go-demos" />
-        <item itemvalue="Go Build.go build go-demos/cmd" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +172,7 @@
       <workItem from="1706363834458" duration="84000" />
       <workItem from="1706363931591" duration="5114000" />
       <workItem from="1706369155685" duration="2069000" />
-      <workItem from="1706431260216" duration="7823000" />
+      <workItem from="1706431260216" duration="16939000" />
     </task>
     <servers />
   </component>

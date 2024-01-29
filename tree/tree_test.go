@@ -8,8 +8,8 @@ func TestScanPathFile(t *testing.T) {
 }
 
 func TestScanWalkDir(t *testing.T) {
-	testPath := "/Users/d-lyw/GoProjects/go-demos"
-	err := ScanWalkDir(testPath, 0)
+	testPath := "/Users/d-lyw/GoProjects"
+	err := ScanWalkDir(testPath, 0, 2)
 	if err != nil {
 		return
 	}

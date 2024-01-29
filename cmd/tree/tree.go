@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/urfave/cli/v2"
 	"go-demos/tree"
+	"math"
 	"os"
 )
 
@@ -16,6 +17,7 @@ func main() {
 			Name:    "level",
 			Aliases: []string{"l"},
 			Usage:   "Max depth to print",
+			Value:   math.MaxInt,
 		},
 	}
 	app.Action = func(c *cli.Context) error {
@@ -23,9 +25,9 @@ func main() {
 		if c.NArg() > 0 {
 			dir = c.Args().Get(0)
 		}
-		//level := c.Int("level")
+		level := c.Int("level")
 
-		return tree.ScanWalkDir(dir, 0)
+		return tree.ScanWalkDir(dir, 0, level)
 	}
 
 	err := app.Run(os.Args)
